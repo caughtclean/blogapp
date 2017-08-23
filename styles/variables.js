@@ -7,4 +7,4 @@ export const backgroundColor = '#f0f6f9';
 export const h1FontSize = '36px';
 export const h2FontSize = '31.5px';
 export const h3FontSize = '27.5px';
-export const h4FontSize = '24px';
+export const h4FontSize = '22px';

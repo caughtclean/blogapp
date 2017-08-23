@@ -1,17 +1,24 @@
 import React from 'react';
-import { Container, Text, TextInput } from '../../styles/';
+import { Text, TextInput, FormControl, Button } from '../../styles/';
+import { Title, LoginWrapper, FormContainer } from './Login.style';
 
 export default function Login(props) {
   return (
-    <Container>
-      <Text h4>Sign in to start blogging</Text>
-      <TextInput
-        placeholder={'Email address'}
-      />
-      <TextInput
-        placeholder={'Password'}
-        secureTextEntry
-      />
-    </Container>
+    <LoginWrapper>
+      <Title h4>Sign in to start blogging</Title>
+        <FormControl>
+          <TextInput
+            placeholder={'Email address'}
+            keyboardType={'email-address'}
+          />
+        </FormControl>
+        <FormControl>
+          <TextInput
+            placeholder={'Password'}
+            secureTextEntry
+          />
+        </FormControl>
+      <Button info title={'Login'}/>
+    </LoginWrapper>
     );
 }
