@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, TextInput, FormControl, Button } from '../../styles/';
 import { Title, LoginWrapper, FormContainer } from './Login.style';
 
-export default function Login(props) {
+export default function Login({ navigation }) {
   return (
     <LoginWrapper>
       <Title h4>Sign in to start blogging</Title>
@@ -18,7 +18,11 @@ export default function Login(props) {
             secureTextEntry
           />
         </FormControl>
-      <Button info title={'Login'}/>
+      <Button
+        info
+        title={'Login'}
+        onPress={() => navigation.navigate('Blogs')}
+        />
     </LoginWrapper>
     );
 }
