@@ -4,26 +4,36 @@ import { Container } from './styles/grid';
 import { StackNavigator } from 'react-navigation';
 import Login from './screens/Login/Login';
 import Blogs from './screens/Blogs/Blogs';
+import NewBlog from './screens/NewBlog/NewBlog';
 
 export default StackNavigator({
   Login: {
     screen: Login,
-    navigationOptions: ({ navigation }) => {
-      return {
+    navigationOptions: {
       title: 'Login',
-      headerRight: (<Button
-       title={'New'}
-       onPress={() => navigation.navigate('Login')}
-       />)
-      };
     },
   },
   Blogs: {
     screen: Blogs,
-    navigationOptions: {
-      title: 'Blogs'
+    navigationOptions: ({ navigation }) => {
+      return {
+      title: 'Blogs',
+      headerRight: (<Button
+       title={'New'}
+       onPress={() => navigation.navigate('NewBlog')}
+       />)
+      };
     },
   },
+  NewBlog: {
+    screen: NewBlog,
+    navigationOptions: {
+      title: 'NewBlog'
+    }
+  },
+
+}, {
+  intialRouteName: 'NewBlog'
 
 });
 
